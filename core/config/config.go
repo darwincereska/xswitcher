@@ -1,11 +1,11 @@
 package config
 
 import (
+	"fmt"
+	"gopkg.in/yaml.v3"
 	"os"
 	"path/filepath"
 	"xswitcher/core"
-
-	"gopkg.in/yaml.v3"
 )
 
 type Layout struct {
@@ -21,7 +21,30 @@ func Init(path string) {
 	if path != "" {
 
 	} else {
+		home, err := os.UserHomeDir()
+		if err != nil {
+			fmt.Printf("Can not locate User Home Directory: %s\n", err.Error())
+		}
 
+		data := `layouts:
+	main: "us"
+	secondary: "us"
+		`
+
+		filePath := home + "/" + core.CONFIG_DIR + "/" + core.FILENAME
+
+		// Create file
+		file, err := os.Create(filePath)
+		if err != nil {
+			fmt.Printf("Failed to create file: %s\n", err.Error())
+		}
+		defer file.Close()
+
+		// Write data
+		_, err = file.WriteString(data)
+		if err != nil {
+			fmt.Printf("Failed to write data to file: %s\n", err.Error())
+		}
 	}
 }
 
