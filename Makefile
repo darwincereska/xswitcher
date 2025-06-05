@@ -1,6 +1,6 @@
 # Project Variables
 PROJECT_NAME := xswitcher
-VERSION := $(shell git describe --tags --always --dirty)
+VERSION := 0.1.0
 BUILD_TIME := $(shell date -u +%Y-%m-%dT%H:%M:%SZ)
 GOARCH := $(shell go env GOARCH)
 GOOS := $(shell go env GOOS)
@@ -49,7 +49,8 @@ vet:
 
 # Clean Build Artifacts
 clean:
-	rm -rf $(BIN_DIR) $(DIST_DIR)
+	rm -rf $(BIN_DIR) $(DIST_DIR) pkg src $(PROJECT_NAME)-$(VERSION).tar.gz $(PROJECT_NAME)-$(VERSION)-x86_64.pkg.tar.zst
+	rm -rf $(PROJECT_NAME)-$(VERSION)-1-x86_64.pkg.tar.zst $(PROJECT_NAME)-debug-$(VERSION)-1-x86_64.pkg.tar.zst
 	$(GO) clean
 
 # Install system-wide

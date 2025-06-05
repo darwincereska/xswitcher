@@ -20,6 +20,7 @@ prepare() {
 }
 
 build() {
+    cd "$pkgname-$pkgver"
     # Use Makefile but with Arch-friendly flags
     export CGO_CPPFLAGS="${CPPFLAGS}"
     export CGO_CFLAGS="${CFLAGS}"
@@ -39,4 +40,5 @@ package() {
     cd "$pkgname-$pkgver"
     install -d "$pkgdir/usr/bin"
     make DESTDIR="$pkgdir" install
+    make clean
 }
