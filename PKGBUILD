@@ -1,6 +1,6 @@
 # Maintainer: Darwin Cereska <darwin@darwincereska.dev>
 pkgname=xswitcher
-pkgver=0.1.1
+pkgver=0.1.2
 pkgrel=1
 pkgdesc=""
 arch=('x86_64')

@@ -6,12 +6,12 @@
 
 buildGoModule {
   pname = "xswitcher";
-  version = "0.1.1";
+  version = "0.1.2";
   
   src = fetchFromGitHub {
     owner = "darwincereska";
     repo = "xswitcher";
-    rev = "v0.1.1";
+    rev = "v0.1.2";
     hash = "";
   };
   

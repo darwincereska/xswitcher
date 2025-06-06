@@ -1,6 +1,6 @@
 # Project Variables
 PROJECT_NAME := xswitcher
-VERSION := 0.1.1
+VERSION := 0.1.2
 BUILD_TIME := $(shell date -u +%Y-%m-%dT%H:%M:%SZ)
 GOARCH := $(shell go env GOARCH)
 GOOS := $(shell go env GOOS)

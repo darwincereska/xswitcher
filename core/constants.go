@@ -6,7 +6,7 @@ import (
 
 const (
 	NAME       = "XSwitcher"
-	VERSION    = "v0.1.1"
+	VERSION    = "v0.1.2"
 	AUTHOR     = "Darwin Cereska"
 	GITHUB     = "https://github.com/darwincereska"
 	CONFIG_DIR = ".config"
