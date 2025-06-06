@@ -18,7 +18,5 @@ func PrintConstants() {
 	fmt.Println("_______________")
 	fmt.Printf("Made By: %s\n", AUTHOR)
 	fmt.Println(GITHUB)
-	fmt.Printf("Config Directory: %s\n", CONFIG_DIR)
-	fmt.Printf("Config File: %s\n", FILENAME)
 	fmt.Println("_______________")
 }
