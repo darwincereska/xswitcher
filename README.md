@@ -45,3 +45,34 @@ make install
 ``` bash
 make uninstall
 ```
+
+## Usage
+
+1. Init the config file `(~/.config/xswitcher.yml)`:
+
+``` bash
+xswitcher --init
+```
+
+2. Change the layouts that fit the **setxkbmap** usage:
+
+``` yaml
+layouts:
+  main: "us" # Layout you use
+  secondary: "us colemak" # Layout the app switches to
+```
+
+3. Run the program:
+
+``` bash
+xswitcher <command> [args...]
+```
+
+## Compatibility
+
+- Works with Steams `%command%` launch option
+- Works with most apps
+
+## The Future
+
+I plan on adding support for macos and windows using their given api.
