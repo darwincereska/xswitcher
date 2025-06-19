@@ -26,9 +26,13 @@ cd xswitcher
 
 #### Arch Linux:
 
+1. Install dependencies:
 ``` bash
 make install-arch-deps
+```
 
+2. Install package:
+``` bash
 makepkg -si
 ```
 
@@ -38,17 +42,39 @@ makepkg -si
 make install 
 ```
 
+#### MacOS:
+
+ Make sure you have [Homebrew](https://brew.sh) installed
+
+1. Add my [brew tap](https://github.com/darwincereska/homebrew-software):
+
+``` bash
+brew tap darwincereska/software
+```
+
+2. Install app:
+
+``` bash
+brew install xswitcher
+```
+
 ## Uninstall
 
-- To uninstall run:
+#### Linux:
 
 ``` bash
 make uninstall
 ```
 
+#### MacOS:
+
+``` bash
+brew uninstall xswitcher
+```
+
 ## Usage
 
-1. Init the config file `(~/.config/xswitcher.yml)`:
+1. Initialize the config file `(~/.config/xswitcher.yml)`:
 
 ``` bash
 xswitcher --init
@@ -57,6 +83,7 @@ xswitcher --init
 2. Change the layouts that fit the **setxkbmap** usage:
 
 ``` yaml
+# xswitcher.yml
 layouts:
   main: "us" # Layout you use
   secondary: "us colemak" # Layout the app switches to
@@ -70,8 +97,12 @@ xswitcher <command> [args...]
 
 ## Compatibility
 
-- Works with Steams `%command%` launch option
-- Works with most apps
+- Works with Steams `%command%` launch option:
+``` bash
+xswitcher %command%
+```
+- Supports Environment Variables
+- Works with any app that constantly runs. It will not work with apps such as **VSCode** due to that it makes a new process every time
 
 ## The Future
 
